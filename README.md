@@ -2,41 +2,42 @@
 
 ## Descrição do Projeto
 
-O sistema consiste em permitir que os clientes visualizem o cardápio,
-outras informações relevantes sobre o restaurante e enviem seus pedidos.
-Ao chegarem ao restaurante, os clientes encontrarão um QRCode em suas mesas,
-o qual poderão escanear com seus smartphones para acessar o sistema.
-O cardápio deve apresentar pelo menos 20 produtos distintos.
+O sistema tem como objetivo permitir que os clientes visualizem o cardápio, obtenham informações relevantes sobre o restaurante e enviem pedidos diretamente de suas mesas usando um código QR exclusivo.
 
-Quando um cliente realiza um pedido, este é adicionado a uma comanda e 
-encaminhado para a cozinha em uma fila. 
-A prioridade de preparação é dada aos pedidos mais antigos,
-garantindo que os pedidos sejam tratados pela ordem de chegada. 
+## Funcionalidades Principais
 
-O sistema também inclui uma página destinada à equipe da cozinha.
-Nesta página, os pedidos são exibidos juntamente com todas as informações 
-necessárias, como o produto solicitado, a quantidade e o número da mesa. 
-Esta área é considerada a parte administrativa do restaurante,
-onde novos administradores podem ser adicionados. 
-Um único usuário é designado para a equipe da cozinha, 
-dando-lhe acesso exclusivo à lista de pedidos.
+- **Visualização do Cardápio:** [ ] Os clientes podem visualizar o cardápio do restaurante com uma variedade de pelo menos 20 produtos distintos.
 
-Além disso, os atendentes têm a capacidade de cancelar pedidos a pedido dos clientes.
+- **Envio de Pedidos:** [ ] Os clientes podem enviar seus pedidos pelo sistema após escanear o código QR em sua mesa.
 
-## Requisitos Funcionais (RFs)
+- **Priorização de Pedidos:** [ ] Os pedidos são processados com base na ordem de chegada, garantindo uma experiência justa para todos os clientes.
 
-- [ ] Visualização do Cardápio: Os clientes devem poder visualizar o cardápio do restaurante.
-- [ ] Envio de Pedidos: Os clientes podem enviar seus pedidos por meio do sistema.
-- [ ] Priorização de Pedidos: Os pedidos são processados com base na ordem de chegada.
-- [ ] Página da Cozinha: A equipe da cozinha deve ter acesso a uma página para visualizar os pedidos.
-- [ ] Cancelamento de Pedidos: Os atendentes têm a capacidade de cancelar pedidos a pedido dos clientes.
+- **Página da Cozinha:** [ ] A equipe da cozinha tem acesso a uma página dedicada onde podem visualizar os pedidos recebidos e todas as informações relevantes, incluindo produtos solicitados, quantidades e número da mesa.
 
-## Regras de Negócio (RNs)
+- **Cancelamento de Pedidos:** [ ] Os atendentes têm a capacidade de cancelar pedidos a pedido dos clientes.
 
-- [ ] Cancelamento de Pedidos: Os pedidos podem ser cancelados pelos atendentes conforme solicitado pelos clientes.
+## Regras de Negócio
 
-## Requisitos Não Funcionais (RNFs)
+- **Cancelamento de Pedidos:** [ ] Os pedidos podem ser cancelados pelos atendentes conforme solicitado pelos clientes, garantindo a flexibilidade no atendimento.
 
-- [ ] Armazenamento de Dados: Os dados podem ser armazenados em um banco de dados ou utilizando Local Storage.
-- [ ] Responsividade: As páginas desenvolvidas devem ser responsivas para proporcionar uma experiência otimizada em diferentes dispositivos.
-- [ ] Cardápio: Fazer o cadastro e deixar apresentavel pelo menos 20 produtos distintos.
+## Requisitos Não Funcionais
+
+- **Armazenamento de Dados:** [ ] Os dados podem ser armazenados em um banco de dados seguro ou utilizando Local Storage, dependendo da preferência e dos requisitos de segurança.
+
+- **Responsividade:** [ ] As páginas desenvolvidas serão responsivas para proporcionar uma experiência otimizada em diferentes dispositivos, garantindo que os clientes possam usar seus smartphones ou outros dispositivos para fazer pedidos.
+
+- **Cardápio:** [ ] O sistema incluirá pelo menos 20 produtos distintos no cardápio, proporcionando uma variedade de escolhas aos clientes.
+
+## Segurança
+
+Para garantir a segurança e integridade do sistema, implementaremos as seguintes medidas:
+
+- **Autenticação Única:** [ ] Cada pedido gerará um token de acesso único vinculado à mesa e ao pedido do cliente. Esse token ficará indisponível após o pagamento.
+
+- **Validação de Token:** [ ] Um middleware verificará a validade do token sempre que um cliente abrir a aba e ao fazer um pedido, garantindo que apenas pedidos válidos sejam aceitos.
+
+- **Registro de Pedidos:** [ ] O sistema manterá um registro de todos os pedidos com tokens diferentes na mesma mesa e notificará a equipe de atendimento caso haja discrepâncias.
+
+- **Criptografia:** [ ] Todos os dados sensíveis, como informações do cliente e pedidos, serão armazenados e transmitidos de forma segura por meio de criptografia.
+
+Este sistema proporcionará aos clientes uma experiência de pedido conveniente e segura, enquanto garante que o restaurante possa gerenciar os pedidos de forma eficaz.
