@@ -48,18 +48,9 @@ Este sistema proporcionará aos clientes uma experiência de pedido conveniente 
 |   User       |     |   Order     |     |   Product   |
 +--------------+     +-------------+     +-------------+
 | User_ID      |----<| User_ID     |     | Product_ID  |
-| Name         |     | Order_ID    |>----| Name        |
+| Name         |     | Product_ID  |>----| Name        |
 | Email        |     | Date/Time   |     | Description |
-| Access_Token |     | Status      |     | Price       |
+| Password     |     | Status      |     | Price       |
 | Is_Admin     |     | Access_Token|     +-------------+
-| Table_Num    |     +-------------+
-+--------------+
-                            \                /                      
-                            N               N
-                            |               |
-                          +------------------+
-                          |  Order_Product   |
-                          +------------------+
-                          | Order_ID         |
-                          | Product_ID       |
-                          +------------------+
+| Is_Staff     |     | Table_Num   |
++--------------+     +-------------+
