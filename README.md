@@ -40,3 +40,25 @@ Além disso, os atendentes têm a capacidade de cancelar pedidos a pedido dos cl
 - [ ] Armazenamento de Dados: Os dados podem ser armazenados em um banco de dados ou utilizando Local Storage.
 - [ ] Responsividade: As páginas desenvolvidas devem ser responsivas para proporcionar uma experiência otimizada em diferentes dispositivos.
 - [ ] Cardápio: Fazer o cadastro e deixar apresentavel pelo menos 20 produtos distintos.
+
+## Entity-Relationship (ER)
+
++--------------+     +-------------+     +-------------+
+|   User       |     |   Order     |     |   Product   |
++--------------+     +-------------+     +-------------+
+| User_ID      |----<| User_ID     |     | Product_ID  |
+| Name         |     | Order_ID    |>----| Name        |
+| Email        |     | Date/Time   |     | Description |
+| Access_Token |     | Status      |     | Price       |
+| Is_Admin     |     | Access_Token|     +-------------+
+| Table_Num    |     +-------------+
++--------------+
+                            \                /                      
+                            N               N
+                            |               |
+                          +------------------+
+                          |  Order_Product   |
+                          +------------------+
+                          | Order_ID         |
+                          | Product_ID       |
+                          +------------------+
