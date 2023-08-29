@@ -13,11 +13,8 @@ export default {
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-    prefix: '<rootDir>/src/',
+    prefix: '<rootDir>/',
   }),
-  transform: {
-    '^.+\\.(t|j)sx?$': '@swc/jest',
-  },
   preset: 'ts-jest',
   testMatch: ['<rootDir>/src/modules/**/*.spec.ts'],
 }
