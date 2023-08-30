@@ -7,6 +7,7 @@ import { AppError } from '../../errors/AppError'
 import createConnection from '@shared/infra/typeorm'
 import { router } from './routes'
 import cors from 'cors'
+import '@shared/container'
 // require('dotenv/config')
 
 createConnection()

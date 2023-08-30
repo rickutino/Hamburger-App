@@ -1,6 +1,7 @@
 import { Product } from '@modules/products/infra/typeorm/entities/Product'
 import { IProductsRepository } from '../IProductsRepository'
 import { ICreateProductDTO } from '@modules/products/dtos/ICreateProductTDO'
+import { AppError } from '@shared/errors/AppError'
 
 class ProductsRepositoryInMemory implements IProductsRepository {
   products: Product[] = []
@@ -20,6 +21,10 @@ class ProductsRepositoryInMemory implements IProductsRepository {
 
     this.products.push(product)
     return product
+  }
+
+  async findByName(name: string): Promise<Product> {
+    return this.products.find((product) => product.name === name)
   }
 }
 

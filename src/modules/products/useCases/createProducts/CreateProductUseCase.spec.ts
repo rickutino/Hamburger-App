@@ -22,7 +22,7 @@ describe('Create Car', () => {
     expect(product).toHaveProperty('id')
   })
 
-  xit('should not be able to create a product with exists some product name', async () => {
+  it('should not be able to create a product with exists some product name', async () => {
     const productName = faker.commerce.productName()
     await createProductUseCase.execute({
       name: productName,
