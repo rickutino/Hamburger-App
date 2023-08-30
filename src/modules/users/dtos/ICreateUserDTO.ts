@@ -4,6 +4,8 @@ interface ICreateUserDTO {
   email: string
   password: string
   avatar?: string
-  is_admin: boolean
+  isAdmin: boolean
   staff?: 'kicthen' | 'waitress' | undefined
 }
+
+export { ICreateUserDTO }
