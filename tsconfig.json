@@ -2,22 +2,22 @@
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
       "@modules/*": [
-        "src/modules/*"
+        "modules/*"
       ],
       "@shared/*": [
-        "src/shared/*"
+        "shared/*"
       ],
       "@config/*": [
-        "src/config/*"
+        "config/*"
       ],
       "@errors/*": [
-        "src/errors/*"
+        "errors/*"
       ],
       "@utils/*": [
-        "src/utils/*"
+        "utils/*"
       ]
     },
     "resolveJsonModule": true,

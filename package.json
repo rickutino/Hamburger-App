@@ -8,7 +8,9 @@
     "dev:server": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
     "lint": "eslint src --ext .ts --fix",
-    "test": "jest --watchAll --verbose=true"
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:verbose": "jest --passWithNoTests --runInBand",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
