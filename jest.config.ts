@@ -13,7 +13,7 @@ export default {
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-    prefix: '<rootDir>/',
+    prefix: '<rootDir>/src',
   }),
   preset: 'ts-jest',
   testMatch: ['<rootDir>/src/modules/**/*.spec.ts'],

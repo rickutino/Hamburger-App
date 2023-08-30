@@ -12,6 +12,13 @@
     "test:verbose": "jest --passWithNoTests --runInBand",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test",
+      "...": "..."
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -24,6 +31,7 @@
     "@types/node": "^20.5.4",
     "@types/uuid": "^9.0.2",
     "eslint": "^8.47.0",
+    "husky": "^8.0.3",
     "jest": "^27.2.4",
     "ts-jest": "^27.0.5",
     "ts-node-dev": "^2.0.0",
