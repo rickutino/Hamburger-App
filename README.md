@@ -51,6 +51,7 @@ Este sistema proporcionará aos clientes uma experiência de pedido conveniente 
 | Name         |     | Product_ID  |>----| Name        |
 | Email        |     | Date/Time   |     | Description |
 | Password     |     | Status      |     | Price       |
-| Is_Admin     |     | Access_Token|     +-------------+
-| Is_Staff     |     | Table_Num   |
-+--------------+     +-------------+
+| Avatar       |     | Access_Token|     +-------------+
+| Is_Admin     |     | Table_Num   |
+| Is_Staff     |     +-------------+
++--------------+
