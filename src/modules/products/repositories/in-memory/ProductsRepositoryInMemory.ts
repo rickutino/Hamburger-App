@@ -2,7 +2,7 @@ import { Product } from '@modules/products/infra/typeorm/entities/Product'
 import { IProductsRepository } from '../IProductsRepository'
 import { ICreateProductDTO } from '@modules/products/dtos/ICreateProductTDO'
 
-class ProductRepositoryInMemory implements IProductsRepository {
+class ProductsRepositoryInMemory implements IProductsRepository {
   products: Product[] = []
 
   async create({
@@ -23,4 +23,4 @@ class ProductRepositoryInMemory implements IProductsRepository {
   }
 }
 
-export { ProductRepositoryInMemory }
+export { ProductsRepositoryInMemory }
