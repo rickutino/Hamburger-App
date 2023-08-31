@@ -4,7 +4,7 @@ interface ICreateUserDTO {
   email: string
   password: string
   avatar?: string
-  isAdmin: boolean
+  isAdmin?: boolean
   staff?: 'kicthen' | 'waitress' | undefined
 }
 
