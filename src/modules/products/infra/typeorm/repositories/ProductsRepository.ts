@@ -6,7 +6,7 @@ import { ICreateProductDTO } from '@modules/products/dtos/ICreateProductTDO'
 class ProductsRepository implements IProductsRepository {
   private repository: Repository<Product>
 
-  construct() {
+  constructor() {
     this.repository = getRepository(Product)
   }
 

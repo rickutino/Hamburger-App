@@ -44,14 +44,27 @@ Este sistema proporcionará aos clientes uma experiência de pedido conveniente 
 
 ## Entity-Relationship (ER)
 
-+--------------+     +-------------+     +-------------+
-|   User       |     |   Order     |     |   Product   |
-+--------------+     +-------------+     +-------------+
-| User_ID      |----<| User_ID     |     | Product_ID  |
-| Name         |     | Product_ID  |>----| Name        |
-| Email        |     | Date/Time   |     | Description |
-| Password     |     | Status      |     | Price       |
-| Avatar       |     | Access_Token|     +-------------+
-| Is_Admin     |     | Table_Num   |
-| Is_Staff     |     +-------------+
-+--------------+
+<pre>
+          +--------------+     +-------------+     +-------------+
+          |   User       |     |   Order     |     |   Product   |
+          +--------------+     +-------------+     +-------------+
+          | User_ID      |----<| User_ID     |     | Product_ID  |
+          | Name         |     | Product_ID  |>----| Name        |
+          | Email        |     | Date/Time   |     | Description |
+          | Password     |     | Status      |     | Price       |
+          | Avatar       |     | Access_Token|     +-------------+
+          | Is_Admin     |     | Table_Num   |
+          | Is_Staff     |     +-------------+
+          +--------------+
+</pre>
+
+## Getting started
+
+* Clone este Repository em seu terminal:
+>    $ git clone https://github.com/rickutino/Hamburger-App.git
+* Entre no diretorio:
+>    $ cd Hamburger-App
+* Instale as dependencias:
+>    $ npm i
+* To run the project:
+>    $ docker-compose up -d

@@ -1,7 +1,6 @@
 import { Product } from '@modules/products/infra/typeorm/entities/Product'
 import { IProductsRepository } from '../IProductsRepository'
 import { ICreateProductDTO } from '@modules/products/dtos/ICreateProductTDO'
-import { AppError } from '@shared/errors/AppError'
 
 class ProductsRepositoryInMemory implements IProductsRepository {
   products: Product[] = []
