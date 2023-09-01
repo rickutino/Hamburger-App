@@ -9,12 +9,12 @@ import { compilerOptions } from './tsconfig.json'
 export default {
   clearMocks: true,
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/src/modules/**/useCases/**/*.ts'],
+  collectCoverageFrom: ['<rootDir>/src/modules/**/useCases/**/*.ts', '<rootDir>/src/utils/**/**/**/*.ts'],
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/src',
   }),
   preset: 'ts-jest',
-  testMatch: ['<rootDir>/src/modules/**/*.spec.ts'],
+  testMatch: ['<rootDir>/src/modules/**/*.spec.ts','<rootDir>/src/utils/**/*.spec.ts'],
 }
