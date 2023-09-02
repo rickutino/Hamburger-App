@@ -1,5 +1,5 @@
-import { InvalidParamError } from "@shared/errors"
 import { CompareFieldsValidation } from "./compareFieldsValidation"
+import { AppError } from "@shared/errors/AppError"
 
 
 const makeSut = (): CompareFieldsValidation => {
@@ -11,7 +11,7 @@ describe('RequiredField Validation', () => {
     const sut = makeSut()
     const error = sut.validate({ field: 'any_value', fieldToCompare: 'wrong_value' })
 
-    expect(error).toEqual(new InvalidParamError('fieldToCompare'))
+    expect(error).toEqual(new AppError('fieldToCompare'))
   })
 
   test('Should not return if validation success', () => {

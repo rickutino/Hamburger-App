@@ -1,4 +1,5 @@
-import { InvalidParamError } from "@shared/errors"
+
+import { AppError } from "@shared/errors/AppError"
 import { EmailValidator } from "@shared/protocols/emailValidator"
 import { Validation } from "@shared/protocols/validator"
 
@@ -11,10 +12,10 @@ export class EmailValidation implements Validation {
     this.emailValidator = emailValidator
   }
 
-  validate (input: any): Error {
+  validate (input: any): AppError {
     const isValid = this.emailValidator.isValid(input[this.fieldName])
     if (!isValid) {
-      return new InvalidParamError(this.fieldName)
+      return new AppError(this.fieldName)
     }
   }
 }

@@ -1,4 +1,4 @@
-import { InvalidParamError } from "@shared/errors"
+import { AppError } from "@shared/errors/AppError"
 import { EmailValidation } from "./emailValidation"
 import { EmailValidator } from "@shared/protocols/emailValidator"
 
@@ -32,7 +32,7 @@ describe('Email Validation', () => {
     jest.spyOn(emailValidatorStub, 'isValid').mockReturnValue(false)
     const error = sut.validate({ email: 'any_email@mail.com' })
 
-    expect(error).toEqual(new InvalidParamError('email'))
+    expect(error).toEqual(new AppError('email'))
   })
 
   test('Should call EmailValidator with correct email', () => {

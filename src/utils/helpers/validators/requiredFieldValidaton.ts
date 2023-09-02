@@ -1,4 +1,4 @@
-import { MissingParamError } from '../../../shared/errors'
+import { AppError } from '@shared/errors/AppError';
 import { Validation } from "../../../shared/protocols/validator";
 
 export class RequiredFieldValidation implements Validation {
@@ -7,9 +7,9 @@ export class RequiredFieldValidation implements Validation {
     this.fieldName = fieldName
   }
 
-  validate (input: any): Error{
+  validate (input: any): AppError{
     if(!input[this.fieldName]) {
-      return new MissingParamError(this.fieldName)
+      return new AppError(this.fieldName)
     }
   }
 }

@@ -1,24 +1,14 @@
-import { ServerError, UnauthorizedError } from './errors'
+import { AppError } from '@shared/errors/AppError'
 import { HttpResponse } from './http'
 
-export const badRequest = (error: Error): HttpResponse => ({
+export const badRequest = (error: AppError): HttpResponse => ({
   status: 400,
   body: error
 })
 
-export const forbidden = (error: Error): HttpResponse => ({
+export const forbidden = (error: AppError): HttpResponse => ({
   status: 403,
   body: error
-})
-
-export const unauthorized = (): HttpResponse => ({
-  status: 401,
-  body: new UnauthorizedError()
-})
-
-export const serverError = (error: Error): HttpResponse => ({
-  status: 500,
-  body: new ServerError(error.stack)
 })
 
 export const ok = (data: any): HttpResponse => ({
